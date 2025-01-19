@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangladesh Student Community - Madinah University</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #006400;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #004d00;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 800px;
+            margin: auto;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: #004d00;
+        }
+        footer {
+            background-color: #004d00;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            text-align: center;
+            color: #004d00;
+            margin-bottom: 1rem;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        .login-container input {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 0.7rem;
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #004d00;
+        }
+        .error-message {
+            color: red;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (username === 'admin' && password === 'password123') {
+                alert('Login successful!');
+                window.location.href = 'dashboard.html';
+            } else {
+                errorMessage.textContent = 'Invalid username or password. Please try again.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bangladesh Student Community</h1>
+        <p>Islamic University of Madinah</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#events">Events</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="#login">Login</a>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section">
+            <h2>About Us</h2>
+            <p>The Bangladesh Student Community at the Islamic University of Madinah is a group dedicated to supporting Bangladeshi students in their academic and personal journeys. Our mission is to foster unity, provide resources, and promote cultural and educational exchanges.</p>
+        </section>
+
+        <section id="events" class="section">
+            <h2>Events</h2>
+            <p>We organize regular events such as cultural celebrations, academic workshops, and community service initiatives to engage and support our members.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <p>Our members are involved in various projects, including academic research, software development, and community outreach programs aimed at making a positive impact within and beyond the university.</p>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>To join our community or learn more, feel free to reach out to us:</p>
+            <ul>
+                <li>Email: bangladesh.community@ium.edu.sa</li>
+                <li>Phone: +966-50-123-4567</li>
+            </ul>
+        </section>
+
+        <section id="login" class="section">
+            <div class="login-container">
+                <h2>Login</h2>
+                <form onsubmit="handleLogin(event)">
+                    <div id="error-message" class="error-message"></div>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bangladesh Student Community, Islamic University of Madinah. All rights reserved.</p>
+    </footer>
+</body>
+</html>
