@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Library</title>
+    <title>মানবসম্পদ বিভাগ, জামেয়া শহর</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
@@ -22,6 +22,7 @@
         }
         header h1 {
             margin: 0;
+            text-align: center;
         }
         header form {
             margin-top: 0.5rem;
@@ -38,7 +39,38 @@
             color: white;
             border: none;
             cursor: pointer;
+        }header {
+            background-color: #004d99;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* সেন্টারে আনার জন্য */
+            justify-content: center; /* সেন্টারে আনার জন্য */
         }
+        header form {
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column; /* মোবাইল ফ্রেন্ডলি করতে */
+            align-items: center;
+        }
+        header form input[type="text"] {
+            padding: 0.5rem;
+            margin-bottom: 0.5rem; /* মোবাইল ফ্রেন্ডলি লেআউটের জন্য */
+            width: 60%;
+            max-width: 300px;
+        }
+        header form input[type="button"] {
+            padding: 0.5rem;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            cursor: pointer;
+            width: 60%; /* মোবাইল এবং ডেস্কটপ উভয়ের জন্য সমান */
+            max-width: 150px;
+        }
+        
         #banner {
             background-color: #e6f2ff;
             text-align: center;
@@ -87,15 +119,11 @@
 <body>
     <header>
         <h1>বাংলাদেশী প্রবাসী সংগঠন (BPS)</h1>
-        <form>
-            <input type="text" placeholder="Email Address">
-            <input type="button" value="Sign Up">
-        </form>
+        <h1>মানবসম্পদ বিভাগ, জামেয়া শহর, মদিনা প্রদেশ</h1>
     </header>
 
     <div id="banner">
-        <h2>মানবসম্পদ বিভাগ, জামেয়া শহর, মদিনা প্রদেশ</h2>
-        <p>অনলাইন লাইব্রেরি: আস্তে আস্তে যুক্ত করা হবে।</p>
+        <img src = "IU_ALL_H_COLOR_RGB.svg">
     </div>
 
     <div class="table-container">
@@ -103,7 +131,7 @@
             <thead>
                 <tr>
                     <th>ক্রমিক</th>
-                    <th>বিবরণ / বইয়ের নাম</th>
+                    <th>বিবরণ </th>
                     <th>লিংক</th>
                     <th>পিডিএফ</th>
                     <th>অডিও বুক</th>
@@ -112,10 +140,10 @@
             <tbody>
                 <tr>
                     <td>১</td>
-                    <td>বইয়ের উদাহরণ ১</td>
-                    <td><a href="#">লিংক</a></td>
-                    <td><a href="#">পিডিএফ</a></td>
-                    <td><a href="#">অডিও</a></td>
+                    <td>সদস্য/কর্মীদের ব্যাক্তিগত কার্যক্রম</td>
+                    <td>---</td>
+                    <td><a href="0001Report.pdf">পিডিএফ</a></td>
+                    <td>---</td>
                 </tr>
                 <tr>
                     <td>২</td>
@@ -129,7 +157,7 @@
     </div>
 
     <footer>
-        <p>Copyright &copy; 2025 <strong>বাংলাদেশী প্রবাসী সংগঠন</strong>. All Rights Reserved.</p>
+        <p>Copyright &copy; 2025 <strong>মানবসম্পদ বিভাগ, জামেয়া শহর</strong>. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
