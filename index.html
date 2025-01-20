@@ -1,81 +1,135 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-    <title>বাংলাদেশী প্রবাসী সংগঠন (BPS) লাইব্রেরি</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Library</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
     <style>
+        body {
+            font-family: 'Oxygen', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #004d99;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header form {
+            margin-top: 0.5rem;
+        }
+        header form input[type="text"] {
+            padding: 0.5rem;
+            margin-right: 0.5rem;
+            width: 60%;
+            max-width: 300px;
+        }
+        header form input[type="button"] {
+            padding: 0.5rem;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        #banner {
+            background-color: #e6f2ff;
+            text-align: center;
+            padding: 2rem 1rem;
+        }
+        .table-container {
+            max-width: 100%;
+            overflow-x: auto;
+            padding: 1rem;
+        }
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
+            margin: 1rem 0;
         }
-        table, th, td {
+        table th, table td {
             border: 1px solid #ddd;
-        }
-        th, td {
-            padding: 10px;
+            padding: 0.75rem;
             text-align: center;
         }
-        th {
-            background-color: #f4f4f4;
+        table th {
+            background-color: #004d99;
+            color: white;
         }
-        a {
+        table td a {
+            color: #008CBA;
             text-decoration: none;
-            color: #007BFF;
         }
-        a:hover {
-            text-decoration: underline;
+        footer {
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            header form input[type="text"] {
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            header form input[type="button"] {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="wrapper">
-            <h1>বাংলাদেশী প্রবাসী সংগঠন (BPS) লাইব্রেরি</h1>
-        </div>
+        <h1>বাংলাদেশী প্রবাসী সংগঠন (BPS)</h1>
+        <form>
+            <input type="text" placeholder="Email Address">
+            <input type="button" value="Sign Up">
+        </form>
     </header>
-    <main>
-        <div class="wrapper">
-            <section>
-                <h2>মানবসম্পদ বিভাগ, জামেয়া শহর, মদিনা প্রদেশ</h2>
-                <p>এই অনলাইন লাইব্রেরিতে বিভিন্ন বই, লিংক এবং অডিও বুক যুক্ত করা হবে।</p>
 
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ক্রমিক</th>
-                            <th>বিবরণ / বইয়ের নাম</th>
-                            <th>লিংক</th>
-                            <th>পিডিএফ</th>
-                            <th>অডিও বুক</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>১</td>
-                            <td>সহজ কুরআন শিক্ষা</td>
-                            <td><a href="#">লিংক</a></td>
-                            <td><a href="#">PDF</a></td>
-                            <td><a href="#">অডিও</a></td>
-                        </tr>
-                        <tr>
-                            <td>২</td>
-                            <td>ইসলামের পরিচিতি</td>
-                            <td><a href="#">লিংক</a></td>
-                            <td><a href="#">PDF</a></td>
-                            <td><a href="#">অডিও</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </div>
-    </main>
+    <div id="banner">
+        <h2>মানবসম্পদ বিভাগ, জামেয়া শহর, মদিনা প্রদেশ</h2>
+        <p>অনলাইন লাইব্রেরি: আস্তে আস্তে যুক্ত করা হবে।</p>
+    </div>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ক্রমিক</th>
+                    <th>বিবরণ / বইয়ের নাম</th>
+                    <th>লিংক</th>
+                    <th>পিডিএফ</th>
+                    <th>অডিও বুক</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>১</td>
+                    <td>বইয়ের উদাহরণ ১</td>
+                    <td><a href="#">লিংক</a></td>
+                    <td><a href="#">পিডিএফ</a></td>
+                    <td><a href="#">অডিও</a></td>
+                </tr>
+                <tr>
+                    <td>২</td>
+                    <td>বইয়ের উদাহরণ ২</td>
+                    <td><a href="#">লিংক</a></td>
+                    <td><a href="#">পিডিএফ</a></td>
+                    <td><a href="#">অডিও</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <footer>
-        <div class="wrapper">
-            <p>&copy; 2025 বাংলাদেশী প্রবাসী সংগঠন (BPS)। সমস্ত অধিকার সংরক্ষিত।</p>
-        </div>
+        <p>Copyright &copy; 2025 <strong>বাংলাদেশী প্রবাসী সংগঠন</strong>. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
